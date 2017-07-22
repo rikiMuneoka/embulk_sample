@@ -13,8 +13,8 @@ out:
   path_prefix: ./tmp
   file_ext: .csv.gz
   source_format: CSV
-  project: test-bigquery-project-166901
-  dataset: test_for_embulk
+  # project: [your bigquery prjenct name]
+  # dataset: [your bigquery dataset name]
   auto_create_table: true
   table: user
   formatter: {type: csv, charset: UTF-8, delimiter: ',', header_line: false}
