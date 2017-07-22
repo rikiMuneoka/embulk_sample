@@ -27,13 +27,19 @@ Next, you have to put google cloud project credential json file to under directo
 $ export (cat .env)
 ```
 
-### 3. preview
+### 3. setup
+
+```bash
+$ make setup
+```
+
+### 4. preview
 
 ```bash
 $ make preview
 ```
 
-### 4. preview
+### 5. preview
 
 ```bash
 $ make run
