@@ -3,3 +3,4 @@ credentials/*
 tmp/*
 !.gitkeep
 .env
+bundle/
