@@ -1,4 +1,5 @@
 bin/*
 credentials/*
+tmp/*
 !.gitkeep
 .env

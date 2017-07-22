@@ -1,0 +1,22 @@
+in:
+  type: mysql
+  host: {{ env.MYSQL_HOST_NAME }}
+  user: {{ env.MYSQL_USER }}
+  password: {{ env.MYSQL_PASSWORD }}
+  database: embulk_test
+  table: user
+  select: id,name,created_at
+out:
+  type: bigquery
+  auth_method: json_key
+  json_keyfile: ./credentials/bq_project.json
+  path_prefix: tmp
+  file_ext: .csv.gz
+  source_format: CSV
+  project: test-bigquery-project-166901
+  dataset: test_for_embulk
+  auto_create_table: true
+  table: user
+  formatter: {type: csv, charset: UTF-8, delimiter: ',', header_line: false}
+  encoders:
+  - {type: gzip}
